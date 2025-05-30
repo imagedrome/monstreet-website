@@ -1,0 +1,8 @@
+.top_text { font-size: 16px; color: #c9c9c9; margin-top: 50px; }
+.logo_image { margin: 25px 0px 25px 0px;}
+.logo_image img { display: block; }
+.main_images { height: 555px }
+.main_images img { margin-right: 15px; }
+.main_images img:last-child { margin-right: 0px; }
+.download { margin: 25px 0px 60px 0px }
+.download div { margin-right: 8px }

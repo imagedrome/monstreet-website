@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MONSTREET</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=980" />
+	<meta property="og:title" content="Monstreet" />
+	<meta property="og:description" content="Monstreet is a company that develops and services apps that provide usability and convenience differentiated from numerous existing apps with a unique location-based function." />
+	<meta property="og:image" content="http://monstreet.com/images/metaimage.png" />	
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Pragma" content="no-cache">
+	<link rel="stylesheet" media="all" href="css/reset.css" />
+	<link rel="stylesheet" media="all" href="css/main.css" />
+	<link rel="stylesheet" media="all" href="css/about.css" />
+	<script src="javascript/jquery.min.js"></script>	
+	<script type="text/javascript" charset="utf-8">
+	
+		if (navigator.userAgent.indexOf('Mobi') >= 0 ) { $('head').append('<link rel="stylesheet" media="all" href="css/mobile.css" />'); } 
+		
+		$("document").ready(function(){ 
+			
+			$("#home_link img").mouseenter(function(){
+				$(this).attr('srcset','images/home2@1x.png, images/home2@2x.png 2x');
+				$(this).attr('src','images/home2@1x.png');
+			});
+			
+			$("#home_link img").mouseleave(function(){       
+				$(this).attr('srcset','images/home1@1x.png, images/home1@2x.png 2x');
+				$(this).attr('src','images/home1@1x.png');
+			});
+
+			$("#mail_link img").mouseenter(function(){
+				$(this).attr('srcset','images/contact2@1x.png, images/contact2@2x.png 2x');
+				$(this).attr('src','images/contact2@1x.png');
+			});
+			
+			$("#mail_link img").mouseleave(function(){       
+				$(this).attr('srcset','images/contact1@1x.png, images/contact1@2x.png 2x');
+				$(this).attr('src','images/contact1@1x.png');
+			});
+			
+			
+		});
+		
+	</script>
+</head>
+
+
+<body>
+	<div class='header'>
+		<div class='content wrap'>
+			<div class='logo left'>
+				<a href='./index.html'><img src='images/top_logo@1x.png' width="230" height="40" srcset="images/top_logo@1x.png, images/top_logo@2x.png 2x" class='block' /></a>
+			</div>			
+			<div class='right links wrap'>
+				<div class='left'>
+					<a href='./index.html' id='home_link'><img src='images/home1@1x.png' width="20" height="30" srcset="images/home1@1x.png, images/home1@2x.png 2x" class='block' /></a>
+				</div>
+				<div class='left'>
+					<img src='images/about2@1x.png' width="58" height="30" srcset="images/about2@1x.png, images/about2@2x.png 2x" class='block' />
+				</div>			
+				<div class='left'>				
+					<a href='mailto:info@monstreet.com' id='mail_link'><img src='images/contact1@1x.png' width="80" height="30" srcset="images/contact1@1x.png, images/contact1@2x.png 2x" class='block' /></a>
+				</div>							
+			</div>			
+		</div>
+	</div>
+	
+	<div class='body'>
+		<div class='images'>
+			<div id='big_logo'>
+				<img src='images/big_logo@1x.png' width="840" height="240" srcset="images/big_top@1x.png, images/big_top@2x.png 2x" class='block' />
+			</div>
+			<div id='about_midtitle'>
+				<img src='images/about_midtitle@1x.png' width="570" height="74" srcset="images/about_midtitle@1x.png, images/about_midtitle@2x.png 2x" class='block' />
+			</div>
+		</div>
+		<div class='text'>
+			<font class='blod'>Monstreet</font> is a company that develops and services apps that provide differentiated usability and user experience with a unique location-based feature.<br/>
+			<br/>
+			<font class='blod'>Monstreet</font> has been providing various app services; a chatting app <font class='blod'>WalkFlow</font> in 2020 and a short-form video sharing app <font class='blod'>StreetNow</font> and <font class='blod'>Knok</font> in 2021, which are all location-based services .<br/>
+			<br/>
+			<font class='blod'>Monstreet</font> has a Headquarter in San Jose and develops the app in Seoul, supported by Broong, Inc. and Imagedrome, Inc.
+			<br/>
+		</div>		
+		
+	</div>
+	
+	<div class='footer'>
+		<div class='content'>
+			© Monstreet, Inc. Powered by Broong, Inc. and Imagedrome, Inc.
+		</div>
+	</div>
+
+</body>
+</html>
