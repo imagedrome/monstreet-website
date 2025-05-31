@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-  <title>MONSTREET</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=960" />
-	<meta property="og:title" content="Monstreet" />
-	<meta property="og:description" content="Monstreet has recently launched Linkage, a new concept in relationship management services. Linkage is now available for download on Google Play. Monstreet is a company that plans, develops, and provides innovative mobile services with the support of Broong, Inc. and Imagedrome, Inc." />
-	<meta property="og:image" content="https://d1jktj9ld996g.cloudfront.net/meta/monstreet.png" />
-	<meta property="og:url" content="http://monstreet.com" />
-	<meta http-equiv="Expires" content="-1">
-	<meta http-equiv="Pragma" content="no-cache">
-	<link rel="icon" href="favicon.png" type="image/png">
-	<link rel="apple-touch-icon" href="https://d1jktj9ld996g.cloudfront.net/meta/icon/48icon_monstreet.png"/>
-	<style type="text/css">
+<title>MONSTREET</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=960" name="viewport"/>
+<meta content="Monstreet" property="og:title"/>
+<meta content="Monstreet has recently launched Linkage, a new concept in relationship management services. Linkage is now available for download on Google Play. Monstreet is a company that plans, develops, and provides innovative mobile services with the support of Broong, Inc. and Imagedrome, Inc." property="og:description"/>
+<meta content="https://d1jktj9ld996g.cloudfront.net/meta/monstreet.png" property="og:image"/>
+<meta content="http://monstreet.com" property="og:url"/>
+<meta content="-1" http-equiv="Expires"/>
+<meta content="no-cache" http-equiv="Pragma"/>
+<link href="https://d1jktj9ld996g.cloudfront.net/meta/icon/48icon_monstreet.png" rel="icon"/>
+<link href="https://d1jktj9ld996g.cloudfront.net/meta/icon/48icon_monstreet.png" rel="apple-touch-icon"/>
+<style type="text/css">
 		html, body, div, span, applet, object, iframe,
 		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 		a, abbr, acronym, address, big, cite, code,
@@ -70,8 +71,7 @@
 		.wrap .right { float: right; }
 		/* clear fix END */
 	</style>
-
-	<style type="text/css">
+<style type="text/css">
 		html {
 		  -webkit-text-size-adjust: none;
 		  -moz-text-size-adjust: none;
@@ -155,53 +155,88 @@
 	</style>
 </head>
 <body>
-	<div class='header'>
-		<div class='img'>
-			<img src='images/2023/top_area_logo@1x.png' width="270" height="300" srcset="images/2023/top_area_logo@1x.png, images/2023/top_area_logo@2x.png 2x" class='block'/>
-		</div>
-	</div>
-
-	<div class="body">
-		<div class="text">
-			<img src='images/2023/body_text@1x.png' width="846" height="195" srcset="images/2023/body_text@1x.png, images/2023/body_text@2x.png 2x" class='block'/>			
-		</div>
-		<div class="store">
-			<a href='https://play.google.com/store/apps/details?id=com.broong.linkage' alt='Linkage'>
-				<img src='images/2023/playstore@1x.png' width="270" height="66" srcset="images/2023/playstore@1x.png, images/2023/playstore@2x.png 2x" class='block'/>
-			</a>
-		</div>
-
-			<div class='app_images wrap'>
-				<div class='left'>
-					<img src='images/2023/graphic1@1x.png' width="270" height="600" srcset="images/2023/graphic1@1x.png, images/2023/graphic1@2x.png 2x" class='block'/>
-				</div>
-				<div class='left center'>
-					<img src='images/2023/graphic2@1x.png' width="270" height="600" srcset="images/2023/graphic2@1x.png, images/2023/graphic2@2x.png 2x" class='block'/>
-				</div>			
-				<div class='left'>
-					<img src='images/2023/graphic3@1x.png' width="270" height="600" srcset="images/2023/graphic3@1x.png, images/2023/graphic3@2x.png 2x" class='block'/>
-				</div>			
-				
-			</div>			
-
-	</div> 
-
-
-
-	<div class='footer'>			
-		<div class='content'>
-			<div class='company'>
-				<img src='images/2023/company_logo@1x.png' width="500" height="220" srcset="images/2023/company_logo@1x.png, images/2023/company_logo@2x.png 2x" class='block'/>
-			</div>
-			<div class='mail'>
-				<a href='mailto:info@monstreet.com' alt='info@monstreet.com'><img src='images/2023/mail@1x.png' width="60" height="60" srcset="images/2023/mail@1x.png, images/2023/mail@2x.png 2x" class='block' /></a>
-			</div>
-          <div class='tp'>
-  Linkage's <a href='https://lnk.ge/tp/terms.html' alt='Terms of Use'>Terms of Use</a> and 
-  <a href='https://lnk.ge/tp/privacy.html' alt='Privacy Policy'>Privacy Policy</a>.
+<style>
+#popup-alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.95);
+  border: 1px solid #ccc;
+  padding: 15px 25px;
+  z-index: 9999;
+  font-size: 14px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  max-width: 420px;
+  text-align: center;
+  animation: slideDown 0.5s ease-out;
+}
+#popup-alert button {
+  margin-top: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@keyframes slideDown {
+  from { top: 0; opacity: 0; }
+  to { top: 20px; opacity: 1; }
+}
+</style>
+<div id="popup-alert">
+<p><strong>⚠️ Linkage service is temporarily unavailable due to an unexpected server issue.</strong><br/>
+  Our team is working to restore full service as quickly and safely as possible.<br/>
+  We appreciate your patience and understanding.</p>
+<button onclick="document.getElementById('popup-alert').style.display='none'">Close</button>
 </div>
-		</div>
-	</div>
+<script>
+setTimeout(() => {
+  const alert = document.getElementById('popup-alert');
+  if (alert) alert.style.display = 'none';
+}, 10000);
+</script>
 
+<div class="header">
+<div class="img">
+<img class="block" height="300" src="images/2023/top_area_logo@1x.png" srcset="images/2023/top_area_logo@1x.png, images/2023/top_area_logo@2x.png 2x" width="270"/>
+</div>
+</div>
+<div class="body">
+<div class="text">
+<img class="block" height="195" src="images/2023/body_text@1x.png" srcset="images/2023/body_text@1x.png, images/2023/body_text@2x.png 2x" width="846"/>
+</div>
+<div class="store">
+<a alt="Linkage" href="https://play.google.com/store/apps/details?id=com.broong.linkage">
+<img class="block" height="66" src="images/2023/playstore@1x.png" srcset="images/2023/playstore@1x.png, images/2023/playstore@2x.png 2x" width="270"/>
+</a>
+</div>
+<div class="app_images wrap">
+<div class="left">
+<img class="block" height="600" src="images/2023/graphic1@1x.png" srcset="images/2023/graphic1@1x.png, images/2023/graphic1@2x.png 2x" width="270"/>
+</div>
+<div class="left center">
+<img class="block" height="600" src="images/2023/graphic2@1x.png" srcset="images/2023/graphic2@1x.png, images/2023/graphic2@2x.png 2x" width="270"/>
+</div>
+<div class="left">
+<img class="block" height="600" src="images/2023/graphic3@1x.png" srcset="images/2023/graphic3@1x.png, images/2023/graphic3@2x.png 2x" width="270"/>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="content">
+<div class="company">
+<img class="block" height="220" src="images/2023/company_logo@1x.png" srcset="images/2023/company_logo@1x.png, images/2023/company_logo@2x.png 2x" width="500"/>
+</div>
+<div class="mail">
+<a alt="info@monstreet.com" href="mailto:info@monstreet.com"><img class="block" height="60" src="images/2023/mail@1x.png" srcset="images/2023/mail@1x.png, images/2023/mail@2x.png 2x" width="60"/></a>
+</div>
+<div class="tp">
+            Linkage's <a alt="Terms of Use" href="https://lkg.monstreet.com/tp/terms">Terms of Use</a> and <a alt="Privacy Policy" href="https://lkg.monstreet.com/tp/privacy">Privacy Policy</a>.
+          </div>
+</div>
+</div>
 </body>
 </html>
