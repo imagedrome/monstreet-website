@@ -233,6 +233,7 @@ body.home {
   overflow-x: hidden;
   display: flex;
   justify-content: center;
+  max-width: 100%;
 }
 
 body.home a {
@@ -253,7 +254,11 @@ body.home a:focus-visible {
 
 .poster {
   box-sizing: border-box;
-  width: min(100%, calc(var(--poster-max) + 2 * 45px));
+  /* min-width: 0 — without this, iOS Safari flex items won't shrink below
+     intrinsic screenshot widths and the page clips horizontally. */
+  width: 100%;
+  max-width: calc(var(--poster-max) + 2 * 45px);
+  min-width: 0;
   margin-inline: auto;
   padding:
     var(--poster-pad-top)
@@ -267,6 +272,7 @@ body.home a:focus-visible {
 .poster-title {
   display: block;
   width: min(100%, 760px);
+  max-width: 100%;
   height: auto;
   margin: 0 0 var(--poster-gap-title);
 }
@@ -276,13 +282,15 @@ body.home a:focus-visible {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--poster-shot-gap);
   width: 100%;
-  max-width: var(--poster-max);
+  max-width: min(100%, var(--poster-max));
+  min-width: 0;
   margin: 0 0 var(--poster-gap-shots);
 }
 
 .poster-shots img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   aspect-ratio: 270 / 587;
   object-fit: contain;
@@ -316,6 +324,11 @@ body.home a:focus-visible {
   width: auto;
 }
 
+.poster-copy-link {
+  display: inline-block;
+  line-height: 0;
+  margin: 0 0 var(--poster-gap-footer);
+}
 
 .poster-copy {
   display: block;
@@ -329,7 +342,22 @@ body.home a:focus-visible {
   object-position: left center;
 }
 
+.poster-privacy {
+  display: inline-block;
+  line-height: 0;
+  margin: 0 0 var(--poster-gap-footer);
+}
 
+.poster-privacy img {
+  display: block;
+  /* privacy@2x.png 266×42 → CSS 133×21 */
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: clamp(16px, 3.5vw, 21px);
+  object-fit: contain;
+  object-position: left center;
+}
 
 .poster-email {
   display: inline-block;
@@ -351,10 +379,10 @@ body.home a:focus-visible {
   }
 }
 
-/* Screenshots: 1 column on narrow phones */
-@media (max-width: 420px) {
+/* Screenshots: 1 column on phones (iPhone 12 Pro ≈ 390 CSS px) */
+@media (max-width: 600px) {
   .poster-shots {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
