@@ -7,3 +7,10 @@ Brand names use Latin **Monstreet** only in metadata/JSON-LD. HTML + CSS only; e
 ## Deploy
 
 Cloudflare Pages → this repo root. No build step.
+
+## HTTPS / host hardening
+
+- `_headers` — HSTS + basic security headers (Cloudflare Pages).
+- `functions/_middleware.js` — 301 redirect `www.` → apex.
+
+If `www` returns Cloudflare **522**, the hostname is not reaching this Pages project. In Cloudflare: Pages → Custom domains → add `www.<domain>`, or point `www` CNAME at the same Pages target as apex.
